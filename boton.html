@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEND NAME TO WHATSAPP</title>
+  </head>
+  <body>
+    <button id="mi-button">Tap Here</button>
+    <script>
+      document.querySelector('#mi-button').addEventListener('click', e => {
+        e.preventDefault();
+
+        //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
+        const telefono = '2348165846414';
+
+        const href = window.location.href;
+
+        let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
+                  *_YO_*%0A
+                  *Hello*%0A%0A
+                  *This is the Information*%0A
+                  ${href}%0A
+                  *Thanks*%0A
+                  `;
+
+        window.open(url);
+      });
+    </script>
+  </body>
+</html>
