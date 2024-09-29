@@ -5,10 +5,7 @@ document.querySelector("#submit").addEventListener("click", e => {
   const telefono = "2348165846414";
 
   const cliente = document.querySelector("#cliente").value;
-  const fecha = document.querySelector("#fecha").value;
-  const hora = document.querySelector("#hora").value;
   const empleado = document.querySelector("#empleado").value;
-  const servicio = document.querySelector("#servicio").value;
   const resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
@@ -25,7 +22,7 @@ document.querySelector("#submit").addEventListener("click", e => {
 
   if (cliente === "" || fecha === "" || hora === "") {
     resp.classList.add("fail");
-    resp.innerHTML = `Faltan algunos datos, ${cliente}`;
+    resp.innerHTML = `some Value are missing, ${cliente}`;
     return false;
   }
   resp.classList.remove("fail");
